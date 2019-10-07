@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-let rawdata = fs.readFileSync('./data/bands.json');
+let rawdata = fs.readFileSync('./data/raw-bands.json');
 let bands = JSON.parse(rawdata);
 
 for (const band of bands) {
