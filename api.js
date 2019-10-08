@@ -9,8 +9,7 @@ app.get('/bands', function (req, res) {
 
     let rawdata = fs.readFileSync('./data/bands.json');
     let bands = JSON.parse(rawdata);
-
-    res.send(bands.filter(b => b.ts >= start && b.ts <= end))
+    res.send(bands.filter(b => b.t >= start && b.t <= end))
 })
 
 app.get('/prices', function (req, res) {
@@ -52,4 +51,4 @@ app.get('/trades', function (req, res) {
 
 // res.send(chunks[page])
 
-app.listen(3000, () => console.log(`Example app listening on port 3000!`))
+app.listen(3000, () => console.log(`Trade chart data api running on 3000!`))
